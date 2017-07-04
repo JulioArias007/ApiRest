@@ -10,7 +10,7 @@ api.get('/product/:productId', ProductCtrl.getProductId)
 api.post('/product', ProductCtrl.saveProduct)
 api.put('/product/:productId', ProductCtrl.updateProduct)
 api.delete('/product/:productId', ProductCtrl.deleteProduct)
-api.get('/private', auth.isAuth, (req, res) => {
+api.get('/private', auth, (req, res) => {
   res.status(200).send({message: 'Tienes Acceso'})
 })
 
